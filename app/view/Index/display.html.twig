@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+   {% block title 'Titre de ma page' %}
+   <base href="http://localhost/todolist/"/>
+</head>
+<body>
+   <header>
+      <h1>Exemple d'appli</h1>
+   </header>
+   <h2>Liste de choses à faire</h2>
+   <ul>
+      <?php foreach($this->genres as $item) : ?>
+      <li><a href="genre/<?php echo $item['id']; ?>"><?php echo $item['libelle']; ?></a></li>
+      <?php endforeach;?>
+   </ul>
+
+   <ul>
+      <?php foreach($this->films as $item) : ?>
+      <li><a href="film/<?php echo $item['id']; ?>"><?php echo $item['titre']; ?></a> - <?php echo $item['annee'] ?></li>
+      <?php endforeach;?>
+   </ul>
+
+   <footer>
+      <p>Pied de page...</p>
+   </footer>
+</body>
+
+
+</html>
+
+
+
+
